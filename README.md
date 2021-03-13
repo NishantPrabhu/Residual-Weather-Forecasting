@@ -19,5 +19,5 @@ python3 main.py --task 'rain' --config 'configs/rain.yaml' --root 'path/to/dir/c
 To load a trained model to perform any downstream tasks, use the `--load` CLI argument like so (model weight will be stored as `best_model.ckpt`):
 
 ```
-python3 main.py --task 'temp' --config 'configs/temp.yaml' --root 'path/to/dir/containing/datafiles' --load 'path/to/dir/containing/trained/model'
+python3 main.py --task 'temp' --config 'configs/temp.yaml' --root 'dir/with/data' --load 'dir/with/trained/model'
 ```
