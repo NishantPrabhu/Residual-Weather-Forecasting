@@ -12,7 +12,7 @@ import pandas as pd
 class ForecastingDataLoader:
 
     def __init__(self, data, config, device):
-        self.data = data                                                        # numpy array of adj_close values for a certain company
+        self.data = data                                                        # numpy array of data points
         self.batch_size = config['batch_size']                                  # number of history/horizon samples to provide
         self.horizon = config['horizon']                                        # number of points to forecast
         self.lookback = config['lookback_horizon_ratio'] * self.horizon         # number of points (as K * horizon) to use as history
