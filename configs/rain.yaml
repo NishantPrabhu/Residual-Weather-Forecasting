@@ -1,0 +1,30 @@
+
+# Rainfall prediction config
+
+epochs: 100
+eval_every: 5
+
+model:
+  num_stacks: 3
+  blocks_per_stack: 3  
+  fc_dim: 256
+  horizon: 6
+  lookback_horizon_ratio: 4
+  forecast_horizon_ratio: 8
+
+optim:
+  name: adam
+  lr: 0.0001
+  weight_decay: 0.0001
+
+scheduler:
+  name:
+
+dataloader:
+  filename: rain_wb
+  data_colname: Rainfall - (MM)
+  normalize: False
+  batch_size: 32
+  horizon: 6
+  lookback_horizon_ratio: 4
+  forecast_horizon_ratio: 8
